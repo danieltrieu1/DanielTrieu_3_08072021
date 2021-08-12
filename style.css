@@ -1,0 +1,18 @@
+@media screen and (max-width:640px) {
+    
+    .banner {
+        width: 2rem;
+    }
+    
+    .menu-card {
+        border: solid red;
+    }
+
+    #order-btn {
+        border: solid purple;
+    }
+
+    #footer {
+        border: solid green;
+    }
+}

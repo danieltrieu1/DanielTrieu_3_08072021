@@ -1,3 +1,15 @@
-body {
-    background: #fff;
-}
+@use '../sass/basics/colors' as *;
+@use '../sass/basics/fonts' as *;
+@use '../sass/basics/responsive' as *;
+
+@use '../sass/elements/animations' as *;
+@use '../sass/elements/box' as *;
+@use '../sass/elements/buttons' as *;
+@use '../sass/elements/cards' as *;
+
+@use '../sass/tools/functions' as *;
+@use '../sass/tools/mixins' as *;
+@use '../sass/tools/variables' as *;
+
+@use '../sass/components/images' as *;
+@use '../sass/components/icons' as *;

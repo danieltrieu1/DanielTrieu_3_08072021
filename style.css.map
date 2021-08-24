@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["sass/style.scss"],"names":[],"mappings":"AAAA;EACI","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["sass/basics/_colors.scss","sass/basics/_fonts.scss","sass/elements/_cards.scss"],"names":[],"mappings":"AAQA;EACI;;;ACTJ;EACI;EACA;;AAGJ;EACI;EACA;;ACCJ;EAEI;EACA","file":"style.css"}

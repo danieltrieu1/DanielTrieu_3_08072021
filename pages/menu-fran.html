@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
     <title>Ohmyfood!</title>
 </head>
@@ -14,7 +14,7 @@
     <header>
 
         <nav id="navigation">
-            <a href="#" class="back-btn">
+            <a href="/index.html" class="back-btn">
                 <i class="fas fa-arrow-left"></i>
             </a>
             <div id="nav-logo">
@@ -30,9 +30,12 @@
             <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="banner">
         </div>
 
+
+    <div id="main-content">
+
         <div id="menu-container">
             
-            <div class="menu-title">
+            <div id="menu-title">
                 <h1>À la française</h1>
                 
                 <div class="icon">
@@ -40,123 +43,182 @@
                 </div>
             </div>
 
-            <div class="entrees">
+            <div class="menu-bloc">
                 
-                <div class="menu-part">
+                <h2>ENTRÉES</h2>
 
-                    <span class="subtitle">ENTRÉES</span>
-                    
-                    <div class="menu-card">
+                <div class="menu-card">
+                    <div class="menu-content">
                         <h3>Tartare de poulpe acidulé</h3>
                         <p>Aux zestes d'orange</p> 
-                    
                         <span class="price"><b>25€</b></span>
 
-                        <div class="icon">
-                            <i class="fas fa-check"></i>
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="menu-card">
+                <div class="menu-card">
+                    <div class="menu-content">
                         <h3>Velouté de légumes d'antan</h3>
-                        <p>Carotte, panais, topinambour</p>
-                    
-                        <span class="price"><b>35€</b></span>
-
-                        <div class="icon">
-                            <i class="fas fa-check"></i>
-                        </div>
+                        <p>Carotte, panais, topinambour</p>  
+                        <span class="price"><b>35€</b></span> 
+                        
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>    
                     </div>
+                </div>
 
-                    <div class="menu-card">
+                <div class="menu-card">
+                    <div class="menu-content">
                         <h3>Soupe à l'oignon</h3>
                         <p>Revisitée</p>
-                       
-                        <span class="price"><b>20€</b></span>
-
-                        <div class="icon">
-                            <i class="fas fa-check"></i>
+                        <span class="price"><b>20€</b></span> 
+                        
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+            </div>
 
+            <div class="menu-bloc">
+
+                <h2>PLATS</h2>
+
+                <div class="menu-card">
+                    <div class="menu-content">
+                        <h3>Coquilles Saint-Jacques</h3>
+                        <p>Accompagnées d'une purée de panais</p>
+                        <span class="price"><b>40€</b></span>
+                        
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-content">
+                        <h3>Magret de canard</h3>
+                        <p>Et parmentier de pommes de terre</p>
+                        <span class="price"><b>35€</b></span>
+
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-content">
+                        <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                        <span class="price"><b>44€</b></span>
+
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div> 
+                    </div>
                 </div>
 
             </div>
 
-            <div class="plats">
+            <div class="menu-bloc">
 
-                <div class="menu-part">
+                <h2>DESSERTS</h2>
+                        
+                <div class="menu-card">
+                    <div class="menu-content">
+                        <h3>Pétales de violettes glacés</h3>
+                        <p>Et purée de noisettes</p>
+                        <span class="price"><b>18€</b></span> 
 
-                    <span class="subtitle">PLATS</span>
-
-                    <div class="menu-card">
-                        <p class="card-title">Coquilles Saint-Jacques</p>
-                        <p class="card-subtitle">Accompagnées d'une purée de panais <b>40€</b></p>
-                    </div>
-
-                    <div class="menu-card">
-                        <p class="card-title">Magret de canard</p>
-                        <p class="card-subtitle">Et parmentier de pommes de terre <b>35€</b></p>
-                    </div>
-
-                    <div class="menu-card">
-                        <p class="card-title">Pigeonneau d’Ille-et-Vilaine</p>
-                        <p class="card-subtitle">Sur son lit de gnocchis aux légumes <b>44€</b></p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="desserts">
-
-                <div class="menu-part">
-
-                    <span class="subtitle">DESSERTS</span>
-
-                    <div class="menu-card">
-                        <p class="card-title">Pétales de violettes glacés</p>
-                        <p class="card-subtitle">Et purée de noisettes <b>18€</b></p>  
-                    </div>
-
-                    <div class="menu-card">
-                        <p class="card-title">Fondant au chocolat</p>
-                        <p class="card-subtitle">Revisité <b>22€</b></p>  
-                    </div>
-
-                    <div class="menu-card">
-                        <p class="card-title">Millefeuille croustillant</p>
-                        <p class="card-subtitle">Myrtilles et pâte d’amande <b>23€</b></p>
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div> 
                     </div>
                 </div>
 
+                <div class="menu-card">
+                    <div class="menu-content">
+                        <h3>Fondant au chocolat</h3>
+                        <p>Revisité</p> 
+                        <span class="price"><b>22€</b></span>
+
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-content">
+                        <h3>Millefeuille croustillant</h3>
+                        <p>Myrtilles et pâte d’amande</p>
+                        <span class="price"><b>23€</b></span>
+
+                        <div class="slide-box">
+                            <div class="icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
             </div>
 
-            <button type="submit" id="order-btn">Commander</button>
+            <div class="btn-bloc">
+                <button type="submit" class="submit-btn">
+                    <a href="#">Commander</a>
+                </button>
+            </div>
+        </div> 
 
-        </div>
+    </div>
 
     </main>
 
     <footer id="footer">
 
-        <div id="footer-info">
+        <div class="info">
 
-            <h2>ohmyfood</h2>
+            <h4>ohmyfood</h4>
 
-            <a href="#">
-                <i class="fas fa-utensils"></i>
-                <span>Proposer un restaurant</span>
-            </a>
+            <div class="list1">
+                <a href="#">
+                    <i class="fas fa-utensils"></i>
+                    <span>Proposer un restaurant</span>
+                </a>
 
-            <a href="#">
-                <i class="fas fa-hands-helping"></i>
-                <span>Devenir partenaire</span>
-            </a>
+                <a href="#">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Devenir partenaire</span>
+                </a>
+            </div>
 
-            <a href="#">Mentions légales</a>
-            
-            <a href="#">Contact</a>
+            <div class="list2">
+                <a href="#">Mentions légales</a>                   
+                <a href="#">Contact</a>
+            </div>
 
         </div>
 

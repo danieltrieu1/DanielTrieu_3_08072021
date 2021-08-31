@@ -1,15 +1,455 @@
-@use '../sass/basics/colors' as *;
-@use '../sass/basics/fonts' as *;
-@use '../sass/basics/responsive' as *;
+@use './base/colors' as *;
+@use './base/fonts' as *;
+@use './base/responsive'as *;
 
-@use '../sass/elements/animations' as *;
-@use '../sass/elements/box' as *;
-@use '../sass/elements/buttons' as *;
-@use '../sass/elements/cards' as *;
+@use './utils/functions' as *;
+@use './utils/mixins' as *;
 
-@use '../sass/tools/functions' as *;
-@use '../sass/tools/mixins' as *;
-@use '../sass/tools/variables' as *;
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: $main-font;
+    scroll-behavior: smooth; 
+    margin: 0 
+}
 
-@use '../sass/components/images' as *;
-@use '../sass/components/icons' as *;
+h2 {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navigation {
+    margin-top: 1rem;
+    @include flex(row);
+    padding: 1rem;
+}
+
+#marker-bloc {
+    @include flex(row);
+    gap: 1rem;
+    background: darken($color: $background-color, $amount: 10%);  
+}
+
+#booking-bloc {
+    background: $background-color;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+
+    .booking-content {
+        
+        @include flex(column);
+        text-align: center;
+        transition: all 0.4s ease;
+
+        h2 {
+            margin: 0;
+            margin: 10px;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        h3 {
+            font-weight: 100;
+            margin: 10px;
+        }
+
+        .submit-btn {
+            @include btn-gradient(170deg,$gradient);
+            padding: 1rem;
+            border: none;
+            border-radius: 2rem;
+            cursor: pointer;
+            margin: 10px;
+            
+            & a{
+                color: #fff;
+                font-weight: 500;
+            }
+
+            &:hover {
+                background: $secondary-color;
+            }
+
+            &:active {
+                @include border-btn;
+            }
+
+        }
+
+    }
+
+}
+
+#function-bloc {
+    font-weight: 400;
+    margin: 1rem;
+
+    #function-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+
+        .function-card { 
+            @include card;
+            background-color: $background-color;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            padding: 1rem;
+
+            &:hover .icon {
+                color: $primary-color;
+            }
+        
+            .card-content {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 2rem 1fr;
+                gap: 1rem;
+
+            }
+
+            .number {
+                position: absolute;
+                @include flex(column);
+                margin-top: 10px;
+                margin-left: -32px;
+                color: lighten($color: $background-color, $amount: 10%);
+                background: $primary-color;
+                padding: 10px;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+            }
+
+            &:hover {
+                background: lighten($color: $primary-color, $amount: 35%);
+                transition: all 0.4s ease;
+            }
+
+            .icon {
+                @include flex(row);
+                color: darken($color: $background-color, $amount: 60%);
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+#restaurant-bloc {
+    display: flex;
+    justify-content: center;
+    background: $background-color;
+    padding: 1rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    #restaurant-box {
+        max-width: 870px;
+    }
+
+    .restaurant-card {
+        display: grid;
+        grid-template-rows: 70% 30%;
+        color: #000;
+        background-color: lighten($color: $background-color, $amount: 10%);
+        @include card;
+        position: relative;
+        height: 16rem;
+        // max-width: 25rem;
+        // margin-bottom: 1rem;
+        &:hover {
+            @include scale;
+        }
+
+    & .top-card{
+        display: flex;
+        justify-content: flex-end;
+            
+        & .new-tag {
+            @include flex(row);
+            position: absolute;
+            background: $tertiary-color;
+            color: darken($color: $tertiary-color, $amount: 40%);
+            border-radius: 2px;
+            font-weight: 500;
+            margin: 1rem;
+            padding: 5px;
+            width: 5rem;
+        }
+
+            & img {
+                // visibility: hidden;
+                object-fit: cover;
+                border-top-right-radius: 1rem;
+                border-top-left-radius: 1rem;
+                width: 100%;
+                height: 100%;
+            }
+    }   
+
+        & .bottom-card {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            line-height: 24px;
+            padding-left: 1rem;
+            width: 100%;
+            height: 100%;
+
+            & .subtitle-card {
+                line-height: 8px;
+
+                h3{
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-weight: 300;
+                }
+            }
+
+            & .icon {
+                display: grid;
+                margin-right: 2rem;
+                padding: 1rem;
+                font-size: 2rem;
+
+                & .full-icon {
+                    visibility: hidden;
+                }
+                
+                &:active {
+                    & .empty-icon {
+                        visibility: hidden;             
+                    }
+                    & .full-icon {
+                        order: -1;
+                        text-transform: uppercase;
+                        background: linear-gradient(to right, $secondary-color 0%, $primary-color 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        visibility: visible;
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+#footer {
+    @include flex(row);
+    background: darken($color: $background-color, $amount: 70%);
+    .info {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        padding-bottom: 1rem;
+        line-height: 2rem;
+        width: 880px; 
+        h4 {
+            margin: 0;
+        }
+        .list {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+        .link {
+            display: grid;
+            grid-template-columns: 1rem 1fr;
+            grid-template-rows: 1fr;
+            gap: 1rem;
+        }
+    }
+
+
+    h4 {
+        font-family: 'Shrikhand', cursive;
+        margin-bottom: 0;
+        font-weight: 0;
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+}
+    @media #{$medium} {
+        #function-bloc {
+            #function-box{
+                .function-card{
+                    .card-content {
+                        display: grid;
+                        grid-template-columns: repeat(3,1fr);
+                        p {
+                            @include flex(column);
+                        }
+                    }
+                }
+                h2 {
+                    @include flex (row);
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+            #restaurant-box {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: auto repeat(2, 1fr);
+                gap: 1rem;
+                margin-bottom: 2rem;
+                h2{
+                    grid-area: 1 / 1 / 1 / 3;
+                    @include flex (row);
+                }
+            }
+
+            #footer {
+                .info {
+                    display: flex;
+                    flex-direction: row;
+                    align-content: flex-start;
+                    justify-content: space-between;
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                    padding-right: 2rem;
+                    h4 {
+                        margin: 0;
+                    }
+                    .list {
+                        .link {
+                            display: grid;
+                            grid-template-columns: 1rem 1fr;
+                            grid-template-rows: 1fr;
+                            gap: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    @media #{$large} {
+        #function-bloc {
+            @include flex(row);
+            #function-box {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: auto 1fr;
+                gap: 2rem;
+                h2 {
+                    grid-area: 1 / 1 / 1 / 4;
+                    @include flex(row);
+                }
+            }
+        }
+
+        #restaurant-bloc {
+            #restaurant-box {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: auto repeat(2, 1fr);
+                gap: 2rem;
+                margin-bottom: 2rem;
+
+                h2{
+                    grid-area: 1 / 1 / 1 / 3;
+                    @include flex(row);
+                }
+            }
+        }
+
+        #footer {
+            .info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                h4 {
+                    margin: 0;
+                }
+                .list {
+                    .link {
+                        display: grid;
+                        grid-template-columns: 1rem 1fr;
+                        grid-template-rows: 1fr;
+                        gap: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$x-large} {
+        #function-bloc {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            #function-box {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: auto 1fr;
+                gap: 2rem;
+                h2 {
+                    grid-area: 1 / 1 / 1 / 4;
+                    @include flex(row);
+                }
+                #function-box {
+                    .function-card {
+                        @include flex(column);
+                    }
+                }
+            }
+        }
+
+        #restaurant-bloc {
+            display: flex;
+            justify-content: center;
+            #restaurant-box {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: auto repeat(2, 1fr);
+                gap: 2rem;
+                margin-bottom: 2rem;
+                h2{
+                    grid-area: 1 / 1 / 1 / 3;
+                    @include flex(row);
+                }
+            }
+        }
+
+        #footer {
+            .info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                h4 {
+                    margin: 0;
+                }
+                .list {
+                    .link {
+                        display: grid;
+                        grid-template-columns: 1rem 1fr;
+                        grid-template-rows: 1fr;
+                        gap: 1rem;
+                    }
+                }
+            }
+        }
+    }

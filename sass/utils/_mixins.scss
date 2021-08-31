@@ -1,0 +1,56 @@
+@use '../base/colors';
+@use '../base/fonts';
+@use '../base/responsive';
+
+
+// @mixin responsive($size) {
+//     @if $size == phone-only {
+//       @media (max-width: 480px) { @content; }
+//     } @else if $size == phone-tab {
+//       @media (min-width: 480px) { @content; }
+//     } @else if $size == tablet-portrait {
+//       @media (min-width: 640px) { @content; }
+//     } @else if $size == tablet-landscape {
+//       @media (min-width: 1024px) { @content; }
+//     } @else if $size == desktop {
+//       @media (min-width: 1360px) { @content; }
+//     }
+// }
+
+
+
+
+
+@mixin flex($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin box {
+    @extend %shadow;
+    transition: all 0.4s ease;
+    border-radius: 1rem;
+}
+
+@mixin btn-gradient ($direction, $gradient) {
+    background: linear-gradient(170deg, $gradient);
+} 
+
+@mixin card {
+    @extend %shadow;
+    transition: all 0.4s ease;
+    border-radius: 1rem;
+}
+
+@mixin border-btn {
+    transition: border-radius 0.4s ease-in,
+                color 0.4s ease-in,
+                background-color 0.4s ease-in;
+}
+
+@mixin scale {
+    transition: transform 1s;
+    transform: scale(0.95);
+}

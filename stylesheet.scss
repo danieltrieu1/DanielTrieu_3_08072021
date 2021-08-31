@@ -224,7 +224,6 @@ a {
  }
 
  @media #{$medium} {
-
     #main-content {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -232,7 +231,6 @@ a {
         border-bottom-left-radius: 3rem;
         border-bottom-right-radius: 3rem;
      }
-
      #menu-container {
          transition: all 0.5s ease;
          border-bottom-left-radius: 3rem;
@@ -254,31 +252,9 @@ a {
              }
          }
      }
-
-     #footer {
-        .info {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            h4 {
-                margin: 0;
-            }
-            .list {
-                .link {
-                    display: grid;
-                    grid-template-columns: 1rem 1fr;
-                    grid-template-rows: 1fr;
-                    gap: 1rem;
-                }
-            }
-        }
-    }
  }
 
  @media #{$large} {
-
     #main-content {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -309,31 +285,9 @@ a {
          }
      }
 
-     #footer {
-        .info {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            h4 {
-                margin: 0;
-            }
-            .list {
-                .link {
-                    display: grid;
-                    grid-template-columns: 1rem 1fr;
-                    grid-template-rows: 1fr;
-                    gap: 1rem;
-                }
-            }
-        }
-    }
-
  }
 
  @media #{$x-large} {
-
     #main-content {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -365,25 +319,4 @@ a {
              margin-top: 2rem;
          }
      }
-     
-     #footer {
-        .info {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            h4 {
-                margin: 0;
-            }
-            .list {
-                .link {
-                    display: grid;
-                    grid-template-columns: 1rem 1fr;
-                    grid-template-rows: 1fr;
-                    gap: 1rem;
-                }
-            }
-        }
-    }
  }

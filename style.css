@@ -250,7 +250,7 @@ a {
   margin-left: 1rem;
   padding-bottom: 1rem;
   line-height: 2rem;
-  width: 880px;
+  width: 870px;
 }
 #footer .info h4 {
   margin: 0;
@@ -314,10 +314,11 @@ a {
   #footer .info {
     display: flex;
     flex-direction: row;
-    align-content: flex-start;
+    align-content: center;
     justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
     padding-right: 2rem;
   }
   #footer .info h4 {
@@ -372,6 +373,8 @@ a {
     justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
   }
   #footer .info h4 {
     margin: 0;
@@ -434,6 +437,8 @@ a {
     justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
   }
   #footer .info h4 {
     margin: 0;

@@ -80,10 +80,12 @@ a {
   padding: 1rem;
   font-size: 2rem;
 }
-#menu-container .menu-bloc {
-  display: flex;
-  flex-direction: column;
+#menu-container .menu-bloc .menu-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  transition: all 0.5s ease;
 }
 #menu-container .menu-bloc h2 {
   text-decoration: underline #99E2D0;
@@ -149,15 +151,33 @@ a {
 }
 
 #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   background: #444444;
 }
 #footer .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   margin-left: 1rem;
   padding-bottom: 1rem;
   line-height: 2rem;
+  width: 880px;
+}
+#footer .info h4 {
+  margin: 0;
+}
+#footer .info .list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+#footer .info .link {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
 }
 #footer h4 {
   font-family: "Shrikhand", cursive;
@@ -184,6 +204,10 @@ a {
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
   }
+
+  #footer .info {
+    padding-left: 1rem;
+  }
 }
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
   #main-content {
@@ -199,27 +223,16 @@ a {
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
   }
-  #menu-container .menu-bloc {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important;
-    transition: all 0.5s ease;
-  }
-  #menu-container .menu-bloc h2 {
-    grid-area: 1/2;
-    display: flex;
-    justify-content: center;
-  }
-  #menu-container .menu-bloc .menu-card {
-    grid-area: 2;
-  }
 
   #footer .info {
     display: flex;
     flex-direction: row;
+    align-content: flex-start;
     justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
   }
   #footer .info h4 {
     margin: 0;
@@ -287,8 +300,7 @@ a {
   }
 
   #menu-container {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     transition: all 0.5s ease;
     border-bottom-left-radius: 3rem;

@@ -29,6 +29,8 @@ a {
 }
 
 #marker-bloc {
+    box-shadow: inset 0px 5px 10px -5px darken($background-color, 40%);
+    overflow: hidden;
     @include flex(row);
     gap: 1rem;
     background: darken($color: $background-color, $amount: 10%);  

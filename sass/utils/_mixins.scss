@@ -2,25 +2,6 @@
 @use '../base/fonts';
 @use '../base/responsive';
 
-
-// @mixin responsive($size) {
-//     @if $size == phone-only {
-//       @media (max-width: 480px) { @content; }
-//     } @else if $size == phone-tab {
-//       @media (min-width: 480px) { @content; }
-//     } @else if $size == tablet-portrait {
-//       @media (min-width: 640px) { @content; }
-//     } @else if $size == tablet-landscape {
-//       @media (min-width: 1024px) { @content; }
-//     } @else if $size == desktop {
-//       @media (min-width: 1360px) { @content; }
-//     }
-// }
-
-
-
-
-
 @mixin flex($direction) {
     display: flex;
     justify-content: center;
@@ -34,23 +15,176 @@
     border-radius: 1rem;
 }
 
-@mixin btn-gradient ($direction, $gradient) {
-    background: linear-gradient(170deg, $gradient);
-} 
-
-@mixin card {
-    @extend %shadow;
-    transition: all 0.4s ease;
-    border-radius: 1rem;
-}
-
-@mixin border-btn {
-    transition: border-radius 0.4s ease-in,
-                color 0.4s ease-in,
-                background-color 0.4s ease-in;
-}
-
 @mixin scale {
     transition: transform 1s;
     transform: scale(0.95);
+}
+
+// animation gradient submit button //
+
+@mixin button {
+
+    $primary-color: #9356DC;
+    $secondary-color: #FF79DA;
+    $tertiary-color: #99E2D0;
+    $background-color: #F6F6F6;
+    $text-color: #000;
+
+    .gradient-btn {
+        @include box;
+        border: none;
+        width: 10rem;
+        cursor: pointer;
+        padding: 1rem;
+        margin-top: 1rem;
+        background-size: 2000% 100%; /* anim */
+        border-radius: 2rem;
+        transition: all 0.4s ease-in-out;
+        background-image: linear-gradient(-182deg, $secondary-color, $primary-color, $secondary-color, $primary-color);
+
+
+        &:hover {
+            border-radius: 1rem;
+            background-position: 100% 0;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 1px 1px 15px 1px lighten($color: $primary-color, $amount: 10%);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        a{
+            color: white;
+            font-weight: normal;
+            padding-left: auto;
+            padding-right: auto;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }   
+}
+
+// animation action hover card //
+
+@mixin card {
+
+  $primary-color: #9356DC;
+  $secondary-color: #FF79DA;
+  $tertiary-color: #99E2D0;
+  $background-color: #F6F6F6;
+  $text-color: #000;
+
+  .menu-card {
+    display: flex;
+    flex-direction: row;
+
+    @include box;
+    
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &:hover .icon {
+      margin-right: 0;
+      transition: all 0.4s ease;
+    }
+
+    &:hover i {
+      transform: rotate(360deg);
+      transition: all 0.4s ease;
+    }
+    .content-card {
+      display: flex;
+      overflow: hidden;   
+      margin: 1rem;
+      width: 100%;
+      max-width: 100%;
+  
+      .text-card {
+        width: 100%;
+        overflow: hidden;
+        & * {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin: 0;
+        }
+      }
+
+      .price {
+        display: flex;
+        align-items: flex-end;
+        margin-right: 1rem;
+      }
+    }
+    .icon {
+      width: 6rem;
+      background: $tertiary-color;
+      @include flex(row);
+      margin-right: -6rem;
+      transition: all 0.4s ease;
+      & i {
+        color: $tertiary-color;
+        padding: 8px;
+        border-radius: 50%;
+        background: white;
+        transition: all 0.4s ease;
+      }
+    }
+  }
+}
+
+// animation du coeur //
+
+@mixin checkbox-icon {
+
+    $primary-color: #9356DC;
+    $secondary-color: #FF79DA;
+    $tertiary-color: #99E2D0;
+    $background-color: #F6F6F6;
+    $text-color: #000;
+
+    .checkbox-icon{
+        position: relative;
+        @include flex(column);
+        width: fit-content;
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+      
+      .fill-icon {
+        position: absolute;
+        @include flex(column);
+        transition-duration: 0.5s;
+        background: $secondary-color;
+        background: linear-gradient(120deg, $secondary-color 0%, $primary-color 100%);
+        opacity: 0;
+        
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .empty-icon {
+        position: absolute;
+        @include flex(column);
+      }
+      
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 3;
+
+        &:checked ~ .empty-icon {
+          transition-duration: 0.4s;
+          opacity: 0;
+        }
+        &:checked ~ .fill-icon{
+          transition-duration: 0.4s;
+          opacity: 1;
+        }
+      }
 }

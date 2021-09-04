@@ -37,14 +37,14 @@ a {
 }
 
 #marker-bloc {
-  box-shadow: inset 0px 5px 10px -5px #909090;
+  box-shadow: inset 0px 5px 10px -5px #c3c3c3;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 1rem;
-  background: #dddddd;
+  background: #e9e9e9;
 }
 
 #booking-bloc {
@@ -70,12 +70,16 @@ a {
   font-weight: 100;
   margin: 10px;
 }
+#booking-bloc .booking-content .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 #booking-bloc .booking-content .button .gradient-btn {
   transition: all 0.4s ease;
   border-radius: 1rem;
   border: none;
-  min-width: 10rem;
-  max-width: 16rem;
   cursor: pointer;
   padding: 1rem;
   margin-top: 1rem;
@@ -98,13 +102,14 @@ a {
   font-size: 1rem;
   color: white;
   font-weight: normal;
-  padding-left: auto;
-  padding-right: auto;
+  padding: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 #function-bloc {
+  display: grid;
+  gap: 1rem;
   font-weight: 400;
   margin: 1rem;
 }
@@ -214,10 +219,12 @@ a {
 }
 
 #restaurant-bloc {
+  display: grid;
   background: #F6F6F6;
   padding: 1rem;
   margin-top: 3rem;
   padding-bottom: 2rem;
+  gap: 1rem;
 }
 #restaurant-bloc #restaurant-box {
   display: grid;
@@ -295,11 +302,11 @@ a {
   justify-content: flex-end;
 }
 #restaurant-bloc .restaurant-card .top-card .new-tag {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  position: absolute;
   background: #99E2D0;
   color: #278870;
   border-radius: 2px;
@@ -383,16 +390,16 @@ a {
   align-items: center;
   flex-direction: row;
   background: #444444;
+  padding: 1rem;
 }
 #footer .info {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  margin-left: 1rem;
   padding-bottom: 1rem;
   line-height: 2rem;
-  width: 870px;
+  width: 100%;
 }
 #footer .info h4 {
   margin: 0;
@@ -424,12 +431,13 @@ a {
   #function-bloc #function-box {
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
   }
   #function-bloc #function-box .function-card {
-    padding-right: 2REM;
+    padding-right: 2rem;
   }
 
   #restaurant-bloc {
@@ -459,7 +467,7 @@ a {
     gap: 2rem;
   }
   #function-bloc #function-box .function-card {
-    padding-right: 2REM;
+    padding-right: 2rem;
   }
 
   #restaurant-bloc {
@@ -479,6 +487,7 @@ a {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    width: 870px;
   }
 }
 @media only screen and (min-width: 1360px) {
@@ -495,7 +504,7 @@ a {
     gap: 2rem;
   }
   #function-bloc #function-box .function-card {
-    padding-right: 2REM;
+    padding-right: 2rem;
   }
 
   #restaurant-bloc {
@@ -515,6 +524,7 @@ a {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    width: 870px;
   }
 }
 

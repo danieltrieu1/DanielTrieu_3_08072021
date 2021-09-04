@@ -33,8 +33,6 @@
     .gradient-btn {
         @include box;
         border: none;
-        min-width: 10rem;
-        max-width: 16rem;
         cursor: pointer;
         padding: 1rem;
         margin-top: 1rem;
@@ -42,7 +40,6 @@
         border-radius: 2rem;
         transition: all 0.4s ease-in-out;
         background-image: linear-gradient(-182deg, $secondary-color, $primary-color, $secondary-color, $primary-color);
-
 
         &:hover {
             border-radius: 1rem;
@@ -59,8 +56,7 @@
             font-size: 1rem;
             color: white;
             font-weight: normal;
-            padding-left: auto;
-            padding-right: auto;
+            padding: 1rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
@@ -80,6 +76,7 @@
   .menu-card {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 
     @include box;
     

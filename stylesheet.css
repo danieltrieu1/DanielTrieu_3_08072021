@@ -133,6 +133,7 @@ a {
 #menu-container .menu-bloc .menu-card {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
   transition: all 0.4s ease;
   border-radius: 1rem;
   background: white;
@@ -186,6 +187,21 @@ a {
   background: white;
   transition: all 0.4s ease;
 }
+#menu-container .menu-bloc .menu-box {
+  animation: slidedown 5s;
+}
+@keyframes slidedown {
+  from {
+    transform: translateY(-50px);
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    height: 100%;
+  }
+}
 #menu-container .button {
   margin-top: 1rem;
   display: flex;
@@ -197,8 +213,6 @@ a {
   transition: all 0.4s ease;
   border-radius: 1rem;
   border: none;
-  width: 10rem;
-  max-width: 14rem;
   cursor: pointer;
   padding: 1rem;
   margin-top: 1rem;
@@ -221,8 +235,7 @@ a {
   font-size: 1rem;
   color: white;
   font-weight: normal;
-  padding-left: auto;
-  padding-right: auto;
+  padding: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

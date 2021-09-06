@@ -728,15 +728,11 @@
   }
   #footer .info .link > *:nth-child(1) {
     -ms-grid-row: 1;
-    grid-row: 1;
     -ms-grid-column: 1;
-    grid-column: 1;
   }
   #footer .info .link > *:nth-child(2) {
     -ms-grid-row: 1;
-    grid-row: 1;
     -ms-grid-column: 3;
-    grid-column: 3;
   }
   #footer h4 {
     font-family: "Shrikhand", cursive;
@@ -813,27 +809,19 @@
     }
     #restaurant-bloc #restaurant-box > *:nth-child(1) {
         -ms-grid-row: 1;
-        grid-row: 1;
         -ms-grid-column: 1;
-        grid-column: 1;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(2) {
         -ms-grid-row: 1;
-        grid-row: 1;
         -ms-grid-column: 3;
-        grid-column: 1;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(3) {
         -ms-grid-row: 3;
-        grid-row: 3;
         -ms-grid-column: 1;
-        grid-column: 1;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(4) {
         -ms-grid-row: 3;
-        grid-row: 3;
         -ms-grid-column: 3;
-        grid-column: 3;
     }
   }
   @media only screen and (min-width: 1024px) and (max-width: 1360px) {
@@ -890,27 +878,19 @@
     }
     #restaurant-bloc #restaurant-box > *:nth-child(1) {
         -ms-grid-row: 1;
-        grid-row: 1;
         -ms-grid-column: 1;
-        grid-column: 1;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(2) {
         -ms-grid-row: 1;
-        grid-row: 1;
         -ms-grid-column: 3;
-        grid-column: 3;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(3) {
         -ms-grid-row: 3;
-        grid-row: 3;
         -ms-grid-column: 1;
-        grid-column: 1;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(4) {
         -ms-grid-row: 3;
-        grid-row: 3;
         -ms-grid-column: 3;
-        grid-column: 3;
     }
   
     #footer .info {
@@ -980,27 +960,19 @@
     }
     #restaurant-bloc #restaurant-box > *:nth-child(1) {
         -ms-grid-row: 1;
-        grid-row: 1;
         -ms-grid-column: 1;
-        grid-column: 1;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(2) {
         -ms-grid-row: 1;
-        grid-row: 1;
         -ms-grid-column: 3;
-        grid-column: 3;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(3) {
         -ms-grid-row: 3;
-        grid-row: 3;
         -ms-grid-column: 1;
-        grid-column: 1;
     }
     #restaurant-bloc #restaurant-box > *:nth-child(4) {
         -ms-grid-row: 3;
-        grid-row: 3;
         -ms-grid-column: 3;
-        grid-column: 3;
     }
   
     #footer .info {

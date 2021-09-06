@@ -380,7 +380,6 @@ a {
 #restaurant-bloc .restaurant-card .top-card {
   display: flex;
   justify-content: flex-end;
-  position: relative;
 }
 #restaurant-bloc .restaurant-card .top-card .new-tag {
   position: absolute;

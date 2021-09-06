@@ -188,7 +188,7 @@ a {
   transition: all 0.4s ease;
 }
 #menu-container .menu-bloc .menu-box {
-  animation: slidedown 5s;
+  animation: slidedown 2s;
 }
 @keyframes slidedown {
   from {

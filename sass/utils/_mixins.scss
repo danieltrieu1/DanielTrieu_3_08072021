@@ -2,6 +2,56 @@
 @use '../base/fonts';
 @use '../base/responsive';
 
+// animation loader  //
+
+@mixin loader {
+
+  $primary-color: #9356DC;
+  $secondary-color: #FF79DA;
+  $tertiary-color: #99E2D0;
+  $background-color: #F6F6F6;
+  $text-color: #000;
+
+  .spinner > div {
+    width: 10px;
+    height: 10px;
+    background-color: $secondary-color;
+  
+    border-radius: 100%;
+    display: inline-block;
+
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }
+}
+
+// mixin flex //
+
 @mixin flex($direction) {
     display: flex;
     justify-content: center;
@@ -9,15 +59,12 @@
     flex-direction: $direction;
 }
 
+//mixin shadow //
+
 @mixin box {
     @extend %shadow;
     transition: all 0.4s ease;
     border-radius: 1rem;
-}
-
-@mixin scale {
-    transition: transform 1s;
-    transform: scale(0.95);
 }
 
 // animation gradient submit button //

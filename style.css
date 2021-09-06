@@ -16,14 +16,18 @@
   width: 100%;
   height: 100%;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   background-color: #F6F6F6;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  -webkit-animation-name: fade-out;
   animation-name: fade-out;
+  -webkit-animation-duration: 3s;
   animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
 }
 .loader .spinner > div {
@@ -59,6 +63,18 @@
   40% {
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes fade-out {
@@ -381,6 +397,7 @@ a {
   width: 5rem;
 }
 #restaurant-bloc .restaurant-card .top-card img {
+  -o-object-fit: cover;
   object-fit: cover;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;

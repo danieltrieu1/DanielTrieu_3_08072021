@@ -412,7 +412,7 @@ a {
 #footer .info .link {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1rem 1rem 1fr;
+  -ms-grid-columns: 1rem 1fr;
   grid-template-columns: 1rem 1fr;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;

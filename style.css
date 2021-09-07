@@ -18,6 +18,7 @@
   height: 100%;
   visibility: hidden;
   position: fixed;
+  z-index: 1;
   overflow: hidden;
   background-color: #F6F6F6;
   display: -webkit-box;
@@ -711,46 +712,38 @@ a {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   line-height: 2rem;
-  width: 100%;
+  width: 900px;
 }
 #footer .info h4 {
   margin: 0;
 }
 #footer .info .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display:flex;
-  gap: 1rem;
-  /* display: -ms-grid;
+  display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1rem 1fr;
   grid-template-columns: 1rem 1fr;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  gap: 1rem; */
+  gap: 1rem;
 }
-
 #footer .info .link > *:nth-child(1) {
-  /* -ms-grid-row: 1;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-row: 1;
-  grid-column: 1; */
-} 
-
-#footer .info .link > *:nth-child(2) {
-  /* -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-row: 1;
-  grid-column: 3; */
+  grid-column: 1;
 }
-
+#footer .info .link > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-row: 1;
+  grid-column: 2;
+}
 #footer h4 {
   font-family: "Shrikhand", cursive;
   margin-bottom: 0;
   font-weight: 0;
   color: #fff;
 }
-
 #footer a {
   text-decoration: none;
   color: #fff;
@@ -930,7 +923,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 900px;
+    width: 870px;
   }
 }
 @media only screen and (min-width: 1360px) {
@@ -1020,6 +1013,8 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 900px;
+    width: 870px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

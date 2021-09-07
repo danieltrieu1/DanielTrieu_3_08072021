@@ -178,7 +178,6 @@ a {
     #restaurant-box {
         display: grid;
         gap: 1rem;
-        max-width: 57rem;
     }
 
     .restaurant-card {
@@ -191,7 +190,6 @@ a {
         @include box;
 
         height: 16rem;
-        max-width: 40rem;
 
     & .top-card{
         display: flex;

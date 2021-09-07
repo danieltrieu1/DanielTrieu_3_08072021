@@ -464,11 +464,11 @@ a {
     grid-template-columns: repeat(3, 33%);
   }
   #menu-container #menu-title {
-    -ms-grid-row: 1;
+    /* -ms-grid-row: 1; */
     grid-row: 1;
-    -ms-grid-column: 1;
+    /* -ms-grid-column: 1; */
     grid-column: 1;
-    -ms-grid-column-span: 3;
+    /* -ms-grid-column-span: 3; */
     grid-area: 1/1/1/4;
   }
   #menu-container .menu-bloc {
@@ -477,22 +477,22 @@ a {
     max-width: 100%;
   }
   #menu-container .button {
-    -ms-grid-row: 3;
+    /* -ms-grid-row: 3; */
     grid-row: 3;
-    -ms-grid-column: 2;
+    /* -ms-grid-column: 2; */
     grid-column: 2;
     grid-area: 3/2;
   }
 
   #footer .info {
     /* display: -webkit-box; */
-    display: -ms-flexbox;
+    /* display: -ms-flexbox; */
     display: flex;
     /* -ms-flex-pack: distribute; */
         justify-content: space-around;
-    -webkit-box-orient: horizontal;
+    /* -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
+        -ms-flex-direction: row; */
             flex-direction: row;
     width: 870px;
   }
@@ -512,11 +512,11 @@ a {
     border-bottom-right-radius: 3rem;
   }
   #menu-container #menu-title {
-    -ms-grid-row: 1;
+    /* -ms-grid-row: 1; */
     grid-row: 1;
-    -ms-grid-column: 1;
+    /* -ms-grid-column: 1; */
     grid-column: 1;
-    -ms-grid-column-span: 3;
+    /* -ms-grid-column-span: 3; */
     grid-area: 1/1/1/4;
   }
   #menu-container .menu-bloc {
@@ -525,22 +525,22 @@ a {
     max-width: 100%;
   }
   #menu-container .button {
-    -ms-grid-row: 3;
+    /* -ms-grid-row: 3; */
     grid-row: 3;
-    -ms-grid-column: 2;
+    /* -ms-grid-column: 2; */
     grid-column: 2;
     grid-area: 3/2;
   }
 
   #footer .info {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
     display: flex;
-    -ms-flex-pack: distribute;
+    /* -ms-flex-pack: distribute; */
         justify-content: space-around;
-    -webkit-box-orient: horizontal;
+    /* -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
+        -ms-flex-direction: row; */
             flex-direction: row;
     width: 870px;
   }

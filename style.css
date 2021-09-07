@@ -540,7 +540,7 @@ a {
   display: -ms-grid;
   display: grid;
   gap: 1rem;
-  max-width: 57rem;
+  max-width: 900px;
 }
 #restaurant-bloc .restaurant-card {
   display: -ms-grid;

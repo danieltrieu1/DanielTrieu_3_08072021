@@ -1,6 +1,5 @@
 #booking-bloc .booking-content .button .gradient-btn, #function-bloc #function-box .function-card .menu-card, #function-bloc #function-box .function-card, #restaurant-bloc .restaurant-card .menu-card, #restaurant-bloc .restaurant-card {
-  -webkit-box-shadow: 0 0px 10px 0 #dddddd, 0px 0px 30px 0px #dddddd;
-          box-shadow: 0 0px 10px 0 #dddddd, 0px 0px 30px 0px #dddddd;
+  box-shadow: 0 0px 10px 0 #dddddd, 0px 0px 30px 0px #dddddd;
 }
 
 @font-face {
@@ -11,14 +10,109 @@
   font-family: "Roboto", sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 }
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  /* margin: 0; */
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
 .loader {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
   visibility: hidden;
   position: fixed;
-  z-index: 1;
   overflow: hidden;
   background-color: #F6F6F6;
   display: -webkit-box;
@@ -41,6 +135,12 @@
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
 }
+
+.loader img {
+    width: 10rem;
+    padding: 5px;
+}
+
 .loader .spinner > div {
   width: 10px;
   height: 10px;
@@ -143,6 +243,10 @@ a {
   padding: 1rem;
 }
 
+#navigation img {
+  width: 10rem;
+}
+
 #marker-bloc {
   -webkit-box-shadow: inset 0px 5px 10px -5px #c3c3c3;
           box-shadow: inset 0px 5px 10px -5px #c3c3c3;
@@ -167,7 +271,7 @@ a {
 #booking-bloc {
   background: #F6F6F6;
   padding-bottom: 2rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 #booking-bloc .booking-content {
   display: -webkit-box;
@@ -190,13 +294,13 @@ a {
 }
 #booking-bloc .booking-content h2 {
   margin: 0;
-  margin: 10px;
+  /* margin: 10px; */
   padding-left: 3rem;
   padding-right: 3rem;
 }
 #booking-bloc .booking-content h3 {
   font-weight: 100;
-  margin: 10px;
+  /* margin: 10px; */
 }
 #booking-bloc .booking-content .button {
   display: -webkit-box;
@@ -221,9 +325,8 @@ a {
   border: none;
   cursor: pointer;
   padding: 1rem;
-  margin-top: 1rem;
-  background-size: 2000% 100%;
-  /* anim */
+  /* margin-top: 1rem; */
+  background-size: 2000% 100%; /* anim */
   border-radius: 2rem;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -244,10 +347,10 @@ a {
   outline: none;
 }
 #booking-bloc .booking-content .button .gradient-btn a {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: white;
-  font-weight: normal;
-  padding: 1rem;
+  /* font-weight: normal; */
+  /* margin: 1rem; */
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -272,7 +375,7 @@ a {
   background-color: #F6F6F6;
   border-radius: 20px;
   margin-left: 1rem;
-  padding: 1rem;
+  padding: 10px;
   max-width: 100%;
 }
 #function-bloc #function-box .function-card .menu-card {
@@ -393,7 +496,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 10px;
-  margin-left: -32px;
+  margin-left: -25px;
   color: white;
   background: #9356DC;
   padding: 10px;
@@ -572,7 +675,7 @@ a {
   font-weight: 500;
   margin: 1rem;
   padding: 5px;
-  width: 5rem;
+  width: 70px;
 }
 #restaurant-bloc .restaurant-card .top-card img {
   -o-object-fit: cover;
@@ -589,8 +692,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 18px;
+  /* font-size: 18px; */
   margin: 1rem;
+  line-height: 22px;
 }
 #restaurant-bloc .restaurant-card .bottom-card .checkbox-icon {
   position: relative;
@@ -657,7 +761,7 @@ a {
           flex-direction: column;
 }
 #restaurant-bloc .restaurant-card .bottom-card input {
-  position: absolute;
+  /* position: absolute; */
   opacity: 0;
   cursor: pointer;
   z-index: 3;
@@ -688,15 +792,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   background: #444444;
   padding: 1rem;
 }
@@ -706,25 +810,26 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 2rem;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  line-height: 2rem;
-  width: 900px;
+  /* padding-bottom: 1rem; */
+  line-height: 30px;
+  width: 100%;
 }
 #footer .info h4 {
   margin: 0;
 }
 #footer .info .link {
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+  display:flex; */
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1rem 1fr;
+  -ms-grid-column: 1rem 1rem 1fr;
   grid-template-columns: 1rem 1fr;
-  -ms-grid-rows: 1fr;
-  grid-template-rows: 1fr;
-  gap: 1rem;
+  gap: 10px;
 }
 #footer .info .link > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -740,8 +845,8 @@ a {
 }
 #footer h4 {
   font-family: "Shrikhand", cursive;
-  margin-bottom: 0;
-  font-weight: 0;
+  /* margin-bottom: 0; */
+  /* font-weight: 0; */
   color: #fff;
 }
 #footer a {
@@ -923,7 +1028,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 870px;
+    width: 900px;
   }
 }
 @media only screen and (min-width: 1360px) {
@@ -1013,7 +1118,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 870px;
+    width: 900px;
   }
 }
 

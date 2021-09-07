@@ -1,6 +1,7 @@
 @use './base/colors' as *;
 @use './base/fonts' as *;
 @use './base/responsive'as *;
+@use './base/reset' as *;
 
 @use './utils/functions' as *;
 @use './utils/mixins' as *;

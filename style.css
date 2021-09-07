@@ -718,6 +718,7 @@ a {
 }
 #footer .info .link {
   display: flex;
+  gap: 1rem;
   /* display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1rem 1fr;

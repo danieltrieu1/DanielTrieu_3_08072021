@@ -717,7 +717,9 @@ a {
   margin: 0;
 }
 #footer .info .link {
-  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display:flex;
   gap: 1rem;
   /* display: -ms-grid;
   display: grid;
@@ -928,7 +930,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 870px;
+    width: 900px;
   }
 }
 @media only screen and (min-width: 1360px) {
@@ -1018,6 +1020,6 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 870px;
+    width: 900px;
   }
 }

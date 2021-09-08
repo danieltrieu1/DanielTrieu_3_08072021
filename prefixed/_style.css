@@ -400,8 +400,6 @@ a {
 #booking-bloc .booking-content .button .gradient-btn a {
   color: white;
   font-weight: normal;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 #function-bloc {
@@ -602,9 +600,6 @@ a {
   display: -ms-grid;
   display: grid;
   gap: 1rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 #restaurant-bloc .restaurant-card {
   display: -ms-grid;
@@ -862,7 +857,6 @@ a {
       -ms-flex-direction: row;
           flex-direction: row;
   background: #373737;
-  padding: 1rem;
 }
 #footer .info {
   display: -webkit-box;
@@ -872,13 +866,23 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
   line-height: 30px;
   width: 100%;
 }
 #footer .info h4 {
+  font-family: "Shrikhand";
+  margin-bottom: 0;
+  font-weight: 400;
+  color: #fff;
   margin: 0;
+}
+#footer .info a {
+  text-decoration: none;
+  color: #fff;
 }
 #footer .info .link {
   display: -ms-grid;
@@ -897,19 +901,9 @@ a {
 }
 #footer .info .link > *:nth-child(2) {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   grid-row: 1;
-  grid-column: 3;
-}
-#footer h4 {
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 0;
-  font-weight: 0;
-  color: #fff;
-}
-#footer a {
-  text-decoration: none;
-  color: #fff;
+  grid-column: 2;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
@@ -1050,6 +1044,8 @@ a {
     -ms-grid-rows: 1fr 1rem 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
   }
   #restaurant-bloc #restaurant-box > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -1140,6 +1136,8 @@ a {
     -ms-grid-rows: 1fr 1rem 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
   }
   #restaurant-bloc #restaurant-box > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -1179,5 +1177,3 @@ a {
     max-width: 900px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

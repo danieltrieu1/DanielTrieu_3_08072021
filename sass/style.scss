@@ -262,40 +262,36 @@ a {
 #footer {
     @include flex(row);
     background: darken($color: $background-color, $amount: 75%);
-    padding: 1rem;
 
     .info {
         display: flex;
         flex-direction: column;
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 1rem;
-        // padding-bottom: 1rem;
+        margin-left: 1rem;
+        padding-bottom: 1rem;
         line-height: 30px;
         width: 100%;
-
+        
         h4 {
+            font-family: $title-font;
+            margin-bottom: 0;
+            font-weight: 400;
+            color: #fff;
             margin: 0;
         }
-
+    
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
         .link {
             display: grid;
             grid-template-columns: 1rem 1fr;
             grid-template-rows: 1fr;
             gap: 10px;
         }
-    }
-
-
-    h4 {
-        font-family: 'Shrikhand', cursive;
-        margin-bottom: 0;
-        font-weight: 0;
-        color: #fff;
-    }
-
-    a {
-        text-decoration: none;
-        color: #fff;
     }
 }
 

@@ -194,9 +194,6 @@ a {
     #restaurant-box {
         display: grid;
         gap: 1rem;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .restaurant-card {
@@ -347,6 +344,8 @@ a {
                 grid-template-columns: repeat(2,1fr);
                 grid-template-rows: repeat(2, 1fr);
                 gap: 1rem;
+                margin-left: 10rem;
+                margin-right: 10rem;
             }
         }
         #footer {
@@ -380,6 +379,8 @@ a {
                 grid-template-columns: repeat(2,1fr);
                 grid-template-rows: repeat(2, 1fr);
                 gap: 1rem;
+                margin-left: 20rem;
+                margin-right: 20rem;
             }
         }
 

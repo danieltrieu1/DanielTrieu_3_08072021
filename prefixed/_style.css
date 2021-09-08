@@ -159,9 +159,6 @@ input, select {
 .loader {
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
   visibility: hidden;
   position: fixed;
   overflow: hidden;
@@ -588,8 +585,19 @@ a {
 }
 
 #restaurant-bloc {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #F6F6F6;
   padding: 1rem;
   margin-top: 3rem;
@@ -599,14 +607,13 @@ a {
 #restaurant-bloc #restaurant-box {
   display: -ms-grid;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  /* breakpoint auto */
+  width: 100%;
+  display: grid;
   gap: 1rem;
 }
 #restaurant-bloc .restaurant-card {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 11rem 5rem;
-  grid-template-rows: 11rem 5rem;
-  height: 16rem;
   color: #000;
   background-color: white;
   -webkit-transition: all 0.4s ease;
@@ -741,7 +748,7 @@ a {
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
   width: 100%;
-  height: 100%;
+  height: 11rem;
 }
 #restaurant-bloc .restaurant-card .bottom-card {
   display: -webkit-box;
@@ -896,14 +903,10 @@ a {
 #footer .info .link > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-row: 1;
-  grid-column: 1;
 }
 #footer .info .link > *:nth-child(2) {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-row: 1;
-  grid-column: 2;
+  -ms-grid-column: 3;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
@@ -943,55 +946,6 @@ a {
   #function-bloc #function-box .function-card {
     padding-right: 2rem;
   }
-
-  #restaurant-bloc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #restaurant-bloc #restaurant-box {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1rem 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 1fr 1rem 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-row: 1;
-    grid-column: 1;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-row: 1;
-    grid-column: 2;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-row: 2;
-    grid-column: 1;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(4) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-row: 2;
-    grid-column: 2;
-  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1360px) {
   #function-bloc {
@@ -1021,55 +975,8 @@ a {
     padding-right: 2rem;
   }
 
-  #restaurant-bloc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   #restaurant-bloc #restaurant-box {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1rem 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 1fr 1rem 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-row: 1;
-    grid-column: 1;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-row: 1;
-    grid-column: 2;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-row: 2;
-    grid-column: 1;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(4) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-row: 2;
-    grid-column: 2;
+    width: 70%;
   }
 
   #footer .info {
@@ -1113,55 +1020,8 @@ a {
     padding-right: 2rem;
   }
 
-  #restaurant-bloc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   #restaurant-bloc #restaurant-box {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1rem 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 1fr 1rem 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    margin-left: 20rem;
-    margin-right: 20rem;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-row: 1;
-    grid-column: 1;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-row: 1;
-    grid-column: 2;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-row: 2;
-    grid-column: 1;
-  }
-  #restaurant-bloc #restaurant-box > *:nth-child(4) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-row: 2;
-    grid-column: 2;
+    width: 55%;
   }
 
   #footer .info {

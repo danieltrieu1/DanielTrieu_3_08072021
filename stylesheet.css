@@ -167,16 +167,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   scroll-behavior: smooth;
-  /* -webkit-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; */
+  transition: all 0.5s ease;
   margin: 0;
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 a {
@@ -227,6 +227,14 @@ a {
   padding-bottom: 2rem;
   border-top-right-radius: 3rem;
   border-top-left-radius: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
 }
 #menu-container #menu-title {
   display: -webkit-box;
@@ -235,9 +243,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-weight: normal;
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 #menu-container #menu-title .checkbox-icon {
   position: relative;
@@ -323,8 +332,23 @@ a {
 }
 #menu-container #menu-title h1 {
   font-size: 25px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+#menu-container #menu-title .checkbox-icon {
+  margin-right: 1rem;
 }
 #menu-container h2 {
+  font-weight: 400;
   padding-bottom: 5px;
   position: relative;
 }
@@ -347,6 +371,7 @@ a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   row-gap: 1rem;
+  line-height: 22px;
   margin-bottom: 1rem;
 }
 #menu-container .menu-bloc .menu-card {
@@ -391,16 +416,7 @@ a {
 }
 #menu-container .menu-bloc .menu-card .content-card .text-card {
   width: 100%;
-  gap: 1rem;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 10px;
 }
 #menu-container .menu-bloc .menu-card .content-card .text-card * {
   white-space: nowrap;
@@ -503,8 +519,6 @@ a {
   border: none;
   cursor: pointer;
   padding: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   margin-top: 1rem;
   background-size: 2000% 100%;
   /* anim */
@@ -530,8 +544,7 @@ a {
 #menu-container .button .gradient-btn a {
   color: white;
   font-weight: normal;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 #footer {
@@ -549,9 +562,7 @@ a {
       -ms-flex-direction: row;
           flex-direction: row;
   background: #373737;
-  padding: 1rem;
 }
-
 #footer .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -560,16 +571,24 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
   line-height: 30px;
   width: 100%;
 }
-
 #footer .info h4 {
+  font-family: "Shrikhand";
+  margin-bottom: 0;
+  font-weight: 400;
+  color: #fff;
   margin: 0;
 }
-
+#footer .info a {
+  text-decoration: none;
+  color: #fff;
+}
 #footer .info .link {
   display: -ms-grid;
   display: grid;
@@ -579,31 +598,17 @@ a {
   grid-template-rows: 1fr;
   gap: 10px;
 }
-
 #footer .info .link > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-row: 1;
   grid-column: 1;
 }
-
 #footer .info .link > *:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-row: 1;
   grid-column: 2;
-}
-
-#footer h4 {
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 0;
-  font-weight: 0;
-  color: #fff;
-}
-
-#footer a {
-  text-decoration: none;
-  color: #fff;
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
@@ -617,6 +622,7 @@ a {
     transition: all 0.5s ease;
   }
   #menu-container #menu-title {
+    margin-right: 1rem;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-row: 1;
@@ -630,7 +636,7 @@ a {
   }
 
   #footer .info {
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1360px) {
@@ -641,6 +647,7 @@ a {
     grid-template-columns: repeat(3, 33%);
   }
   #menu-container #menu-title {
+    margin-right: 1rem;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-row: 1;
@@ -674,6 +681,7 @@ a {
     max-width: 900px;
   }
 }
+
 @media only screen and (min-width: 1360px) {
   #menu-container {
     display: -ms-grid;
@@ -688,6 +696,7 @@ a {
     border-bottom-right-radius: 3rem;
   }
   #menu-container #menu-title {
+    margin-right: 1rem;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-row: 1;

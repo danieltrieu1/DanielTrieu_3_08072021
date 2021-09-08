@@ -1,6 +1,6 @@
-@use '../base/colors';
-@use '../base/fonts';
-@use '../base/responsive';
+@use '../base/_colors';
+@use '../base/_fonts';
+@use '../base/_responsive';
 
 // animation loader  //
 
@@ -100,10 +100,9 @@
         }
 
         a{
-            font-size: 1rem;
+            // font-size: 1rem;
             color: white;
             font-weight: normal;
-            padding: 1rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
         }

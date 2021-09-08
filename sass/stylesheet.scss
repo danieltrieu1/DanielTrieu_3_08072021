@@ -1,10 +1,10 @@
-@use './base/colors' as *;
-@use './base/fonts' as *;
-@use './base/responsive'as *;
-@use './base/reset' as *;
+@use './base/_colors' as *;
+@use './base/_fonts' as *;
+@use './base/_responsive'as *;
+@use './base/_reset' as *;
 
-@use './utils/functions' as *;
-@use './utils/mixins' as *;
+@use './utils/_functions' as *;
+@use './utils/_mixins' as *;
 
 body {
     display: flex;
@@ -30,12 +30,22 @@ a {
     text-align: center;
     margin-top: 1rem;
     padding: 1rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     & .back-btn {
         font-size: 25px;
         color: #000;
         text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 1rem;
+    }
+    & img {
+        width: 10rem;
     }
 }
+
 
 #banner {
     & img {
@@ -61,10 +71,13 @@ a {
         justify-content: space-between;
         font-family: $title-font;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 0;
+        // font-size: 14px;
+        // line-height: 0;
         margin: 1rem;
-        @include checkbox-icon;    
+        @include checkbox-icon;  
+        & h1 {
+            font-size: 25px;
+        }  
     }
 
     h2 {
@@ -120,7 +133,7 @@ a {
     }
 
     .button {
-        margin-top: 1rem;
+        // margin-top: 1rem;
         @include flex(row);
         @include button;
     }
@@ -128,7 +141,8 @@ a {
 
     #footer {
         @include flex(row);
-        background: darken($color: $background-color, $amount: 70%);
+        background: darken($color: $background-color, $amount: 75%);
+
         .info {
             display: flex;
             flex-direction: column;
@@ -136,11 +150,11 @@ a {
             margin-bottom: 1rem;
             margin-left: 1rem;
             padding-bottom: 1rem;
-            line-height: 2rem;
-            width: 870px; 
+            line-height: 30px;
+            width: 100%;
             
             h4 {
-                font-family: 'Shrikhand', cursive;
+                font-family: $title-font;
                 margin-bottom: 0;
                 font-weight: 0;
                 color: #fff;
@@ -156,7 +170,7 @@ a {
                 display: grid;
                 grid-template-columns: 1rem 1fr;
                 grid-template-rows: 1fr;
-                gap: 1rem;
+                gap: 10px;
             }
         }
 }
@@ -177,6 +191,12 @@ a {
         .menu-bloc {
             margin: 1rem;
             max-width: 100%;
+        }
+    }
+
+    #footer {
+        .info {
+            margin-left: 2rem;
         }
     }
 }
@@ -208,6 +228,7 @@ a {
             display: flex;
             justify-content: space-around;
             flex-direction: row;
+            max-width: 900px;
         }
     }
 }
@@ -247,6 +268,7 @@ a {
             display: flex;
             justify-content: space-around;
             flex-direction: row;
+            max-width: 900px;
         }
     }
 }

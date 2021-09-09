@@ -99,13 +99,13 @@
             outline: none;
         }
 
-        span{
+        span {
             // font-size: 1rem;
             color: white;
             font-weight: normal;
             // padding-top: 1rem;
             // padding-bottom: 1rem;
-            // padding: 1rem;
+            padding: 1rem;
         }
     }   
 }
@@ -191,7 +191,7 @@
     $background-color: #F6F6F6;
     $text-color: #000;
 
-    .checkbox-icon{
+    .checkbox-icon {
         position: relative;
         @include flex(column);
         width: fit-content;

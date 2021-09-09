@@ -523,7 +523,7 @@ a {
 #menu-container .button .gradient-btn:focus {
   outline: none;
 }
-#menu-container .button .gradient-btn a {
+#menu-container .button .gradient-btn span {
   color: white;
   font-weight: normal;
   padding: 1rem;
@@ -676,6 +676,7 @@ a {
     max-width: 900px;
   }
 }
+
 @media only screen and (min-width: 1360px) {
   #menu-container {
     display: -ms-grid;

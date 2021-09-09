@@ -245,6 +245,9 @@ input, select {
     opacity: 0;
   }
 }
+.loader img {
+  width: 10rem;
+}
 
 body {
   display: -webkit-box;
@@ -400,6 +403,7 @@ a {
 #booking-bloc .booking-content .button .gradient-btn span {
   color: white;
   font-weight: normal;
+  /* padding: 1rem; */
 }
 
 #function-bloc {
@@ -610,8 +614,7 @@ a {
 #restaurant-bloc #restaurant-box {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  /* breakpoint auto */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* breakpoint auto */
   width: 100%;
   display: grid;
   gap: 1rem;
@@ -909,10 +912,14 @@ a {
 #footer .info .link > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  grid-row: 1;
+  grid-column: 1;
 }
 #footer .info .link > *:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
+  grid-row: 1;
+  grid-column: 2;
 }
 #footer .info .link .icon i {
   display: -webkit-box;

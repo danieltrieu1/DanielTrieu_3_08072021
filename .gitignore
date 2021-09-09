@@ -1,0 +1,5 @@
+dart-sass/*
+tmp/*
+*.exe
+*.ds_store
+*.map

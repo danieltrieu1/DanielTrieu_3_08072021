@@ -65,15 +65,15 @@ a {
     padding-bottom: 2rem;
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    // display: flex;
+    // flex-direction: column;
+    // gap: 1rem;
 
     #menu-title {
         display: flex;
         justify-content: space-between;
         font-family: $title-font;
-        font-weight: normal;
+        // font-weight: normal;
         // font-size: 14px;
         // line-height: 0;
         margin-top: 1rem;
@@ -82,16 +82,18 @@ a {
         & h1 {
             font-size: 25px;
             font-weight: 400;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: flex-end;
         }
         & .checkbox-icon {
             margin-right: 1rem;
+        //     margin-right: 1rem;
         }
     }
 
     h2 {
+        margin-top: 1rem;
         font-weight: 400;
         padding-bottom: 5px;
         position: relative;
@@ -108,7 +110,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        row-gap: 1rem;
+        gap: 1rem;
         line-height: 22px;
         margin-bottom: 1rem;
         @include card;
@@ -152,40 +154,46 @@ a {
     }
 }
 
-    #footer {
-        @include flex(row);
-        background: darken($color: $background-color, $amount: 75%);
+#footer {
+    @include flex(row);
+    background: darken($color: $background-color, $amount: 75%);
 
-        .info {
-            display: flex;
-            flex-direction: column;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            margin-left: 1rem;
-            padding-bottom: 1rem;
-            line-height: 30px;
-            width: 100%;
-            
-            h4 {
-                font-family: $title-font;
-                margin-bottom: 0;
-                font-weight: 400;
-                color: #fff;
-                margin: 0;
-            }
+    .info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        padding-bottom: 1rem;
+        line-height: 30px;
+        width: 100%;
         
-            a {
-                text-decoration: none;
-                color: #fff;
-            }
-            
-            .link {
-                display: grid;
-                grid-template-columns: 1rem 1fr;
-                grid-template-rows: 1fr;
-                gap: 10px;
+        h4 {
+            font-family: $title-font;
+            margin-bottom: 0;
+            font-weight: 400;
+            color: #fff;
+            margin: 0;
+        }
+    
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .link {
+            display: grid;
+            grid-template-columns: 20px 1fr;
+            grid-template-rows: 1fr;
+            & .icon i {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                font-size: 11px;
+                line-height: 30px;
             }
         }
+    }
 }
 
 
@@ -219,7 +227,7 @@ a {
 
     #menu-container {
         display: grid;
-        grid-template-columns: repeat(3,33%);
+        grid-template-columns: repeat(3, 33.3%);
 
         & #menu-title {
             margin-right: 1rem;
@@ -252,7 +260,7 @@ a {
 
     #menu-container {
         display: grid;
-        grid-template-columns: repeat(3,33%);
+        grid-template-columns: repeat(3,33.3%);
 
         max-width: 1360px;
         

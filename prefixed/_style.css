@@ -909,14 +909,10 @@ a {
 #footer .info .link > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-row: 1;
-  grid-column: 1;
 }
 #footer .info .link > *:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  grid-row: 1;
-  grid-column: 2;
 }
 #footer .info .link .icon i {
   display: -webkit-box;
@@ -1061,6 +1057,5 @@ a {
     max-width: 900px;
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */

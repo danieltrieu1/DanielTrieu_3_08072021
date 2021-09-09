@@ -376,7 +376,8 @@ a {
   cursor: pointer;
   padding: 1rem;
   margin-top: 1rem;
-  background-size: 2000% 100%; /* anim */
+  background-size: 2000% 100%;
+  /* anim */
   border-radius: 2rem;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -386,7 +387,7 @@ a {
 }
 #booking-bloc .booking-content .button .gradient-btn:hover {
   border-radius: 1rem;
-  background-position: 100% 0;
+  background-position: 80% 0;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -609,7 +610,8 @@ a {
 #restaurant-bloc #restaurant-box {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* breakpoint auto */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  /* breakpoint auto */
   width: 100%;
   display: grid;
   gap: 1rem;
@@ -711,6 +713,10 @@ a {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+#restaurant-bloc .restaurant-card:hover {
+  -webkit-box-shadow: 0 0px 10px 0 #b6b6b6, 0px 0px 30px 0px #b6b6b6;
+          box-shadow: 0 0px 10px 0 #b6b6b6, 0px 0px 30px 0px #b6b6b6;
 }
 #restaurant-bloc .restaurant-card .top-card {
   display: -webkit-box;
@@ -1026,7 +1032,7 @@ a {
   }
 
   #restaurant-bloc #restaurant-box {
-    width: 55%;
+    width: 950px;
   }
 
   #footer .info {

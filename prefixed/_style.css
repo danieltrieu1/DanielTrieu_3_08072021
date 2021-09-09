@@ -397,7 +397,7 @@ a {
 #booking-bloc .booking-content .button .gradient-btn:focus {
   outline: none;
 }
-#booking-bloc .booking-content .button .gradient-btn a {
+#booking-bloc .booking-content .button .gradient-btn span {
   color: white;
   font-weight: normal;
 }

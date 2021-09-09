@@ -299,36 +299,32 @@ a {
         
         .link {
             display: grid;
-            grid-template-columns: 1rem 1fr;
+            grid-template-columns: 20px 1fr;
             grid-template-rows: 1fr;
-            gap: 10px;
-        }
-    }
-}
-
-@media #{$medium} {
-    #function-bloc {
-        @include flex(column);
-        #function-box {
-            @include flex(row);
-            flex-wrap: wrap;
-            gap: 2rem;
-            .function-card {
-                padding-right: 2rem;
+            & .icon i {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                font-size: 11px;
+                line-height: 30px;
             }
         }
     }
-
-    // #restaurant-bloc {
-    //     @include flex(column);
-    //     #restaurant-box {
-    //         display: grid;
-    //         grid-template-columns: repeat(2,1fr);
-    //         // grid-template-rows: repeat(2, 1fr);
-    //         // gap: 1rem;
-    //     }
-    // }
 }
+
+    @media #{$medium} {
+        #function-bloc {
+            @include flex(column);
+            #function-box {
+                @include flex(row);
+                flex-wrap: wrap;
+                gap: 2rem;
+                .function-card {
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
 
     @media #{$large} {
         #function-bloc {
@@ -345,16 +341,8 @@ a {
         }
 
         #restaurant-bloc {
-            // @include flex(column);
             #restaurant-box {
-                // display: grid;
-                // grid-template-columns: repeat(2,1fr);
-                // grid-template-rows: repeat(2, 1fr);
-                // gap: 1rem;
-                // margin-left: 10rem;
-                // margin-right: 10rem;
                 width: 70%;
-
             }
         }
         #footer {
@@ -381,18 +369,11 @@ a {
             }
         }
 
-         #restaurant-bloc {
-        //     @include flex(column);
-             #restaurant-box {
-        //         display: grid;
-        //         grid-template-columns: repeat(2,1fr);
-        //         // grid-template-rows: repeat(2, 1fr);
-        //         // gap: 1rem;
-        //         // margin-left: 20rem;
-        //         // margin-right: 20rem;
+        #restaurant-bloc {
+            #restaurant-box {
                 width: 950px;
-             }
-         }
+            }
+        }
 
         #footer {
             .info {

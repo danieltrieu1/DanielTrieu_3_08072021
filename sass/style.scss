@@ -23,7 +23,6 @@
     @include loader;
 
     -webkit-animation-name: fade-out;
-
             animation-name: fade-out;
     -webkit-animation-duration: 3s;
             animation-duration: 3s;
@@ -89,7 +88,6 @@ a {
     box-shadow: inset 0px 5px 10px -5px darken($background-color, 20%);
     overflow: hidden;
     @include flex(row);
-    // gap: 1rem;
     background: darken($color: $background-color, $amount: 5%);
     & p {
         font-weight: 400;
@@ -145,8 +143,6 @@ a {
             padding: 1rem;
             font-weight: 500;
 
-            // max-width: 100%;
-
             &:hover .icon {
                 color: $primary-color;
             }
@@ -159,7 +155,6 @@ a {
 
             .number {
                 @include flex(column);
-                // margin-top: 5px;
                 margin-left: -30px;
                 color: lighten($color: $background-color, $amount: 10%);
                 background: $primary-color;
@@ -200,17 +195,9 @@ a {
         width: 100%;
         display: grid;
         gap: 1rem;
-        // grid-template-columns: 1fr 1fr 1fr;
     }
 
     .restaurant-card {
-        // display: grid;
-        // grid-template-rows: 11rem 5rem;
-        // height: 16rem;
-        // width: 100rem;
-
-        
-
         color: #000;
         background-color: lighten($color: $background-color, $amount: 10%);
         
@@ -222,7 +209,7 @@ a {
         }
 
 
-        & .top-card{
+        & .top-card {
             display: flex;
             justify-content: flex-end;
             
@@ -251,22 +238,16 @@ a {
             & .bottom-card {
                 display: flex;
                 justify-content: space-between;
-                // font-size: 18px;
                 margin: 1rem;
                 line-height: 22px;
                 @include checkbox-icon;
 
                 & .subtitle-card {
-
                     h3 {
                         font-weight: 700;
-                        // margin: 0;
                     }
-
                     p {
                         font-weight: 400;
-                        // margin: 0;
-
                     }
                 }
             }
@@ -314,6 +295,8 @@ a {
         }
     }
 }
+
+    //Responsive MobileFirst
 
     @media #{$medium} {
         #function-bloc {

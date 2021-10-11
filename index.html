@@ -43,82 +43,74 @@
 
 <main>
 
-    <article id="marker-bloc">
-
-        <figure class="icon">
-            <i class="fas fa-map-marker-alt"></i>
-        </figure>
-
-        <p>Paris, Belleville</p>
-        
+    <article aria-label="marker-container">
+        <div id="marker-bloc">
+            <figure class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </figure>
+            <p>Paris, Belleville</p>    
+        </div>
     </article>
 
-    <div id="booking-bloc">
+    <article aria-label="booking-container">
+        <div id="booking-bloc">
+            <section class="booking-content">
+                <h2>Réservez le menu qui vous convient</h2>            
+                <h3>Découvrez des restaurants d'exception; <br>
+                    sélectionnés par nos soins</h3>        
+                <div class="button">
+                    <a href="#restaurant-bloc" class="gradient-btn">
+                        <span>Explorer nos restaurants</span> 
+                    </a>
+                </div>
+            </section>
+        </div>
+    </article>
 
-        <article class="booking-content">
-  
-            <h2>Réservez le menu qui vous convient</h2>
-            
-            <h3>Découvrez des restaurants d'exception; <br>
-                sélectionnés par nos soins</h3>
-        
-            <div class="button">
-                <a href="#restaurant-bloc" class="gradient-btn">
-                    <span>Explorer nos restaurants</span> 
-                </a>
-            </div>
-
-        </article>
-   
-    </div>
-
-    <section id="function-bloc">
+    <article id="function-bloc">
         
         <h2>Fonctionnement</h2>
 
-        <article id="function-box">
-            
-            <article class="function-card">               
-                <article class="card-content">
+        <div id="function-box">        
+            <div class="function-card">               
+                <div class="card-content">
                     <div class="number">1</div>
                     <figure class="icon">
                         <i class="fas fa-mobile-alt"></i>
                     </figure>
                     <p>Choisissez un restaurant</p>
-                </article>
-            </article>
+                </div>
+            </div>
 
-            <article class="function-card">
-                <article class="card-content">
+            <div class="function-card">
+                <div class="card-content">
                     <div class="number">2</div>
                     <figure class="icon">
                         <i class="fas fa-list-ul"></i>
                     </figure>
                     <p>Composez votre menu</p>
-                </article>
-            </article>
+                </div>
+            </div>
 
-            <article class="function-card">
-                <article class="card-content">
+            <div class="function-card">
+                <div class="card-content">
                     <div class="number">3</div>
                     <figure class="icon">
                         <i class="fas fa-store"></i>
                     </figure>
                     <p>Dégustez au restaurant</p>
-                </article>
-            </article>
+                </div>
+            </div>
+        </div>
 
-        </article>
+    </article>
 
-    </section>
-
-    <section id="restaurant-bloc">
+    <article id="restaurant-bloc">
 
         <h2>Restaurants</h2>
 
-        <article id="restaurant-box">
-
-            <article class="restaurant-card">            
+        <div id="restaurant-box">
+            <div class="restaurant-card">            
                 <a href="./pages/menu-gout.html">
                     <figure class="top-card">
                         <div class="new-tag">Nouveau</div>
@@ -126,26 +118,25 @@
                     </figure>
                 </a>
 
-                    <article class="bottom-card">
-                        <article class="subtitle-card">
+                    <div class="bottom-card">
+                        <section class="subtitle-card">
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
-                        </article>
+                        </section>
 
-                        <article class="checkbox-icon">
+                        <div class="checkbox-icon">
                             <input type="checkbox">
-
                             <div class="empty-icon">
                                 <i class="far fa-heart"></i>
                             </div>                        
                             <div class="fill-icon">
                                 <i class="fas fa-heart"></i>                     
                             </div>
-                        </article>
-                    </article>
-            </article>
+                        </div>
+                    </div>
+            </div>
                     
-            <article class="restaurant-card">        
+            <div class="restaurant-card">        
                 <a href="./pages/menu-note.html">
                     <figure class="top-card">
                         <div class="new-tag">Nouveau</div>
@@ -153,115 +144,103 @@
                     </figure>
                 </a>
                     
-                    <article class="bottom-card">
-                        <article class="subtitle-card">
+                    <div class="bottom-card">
+                        <section class="subtitle-card">
                             <h3>La note enchantée</h3>
                             <p>Charonne</p> 
-                        </article>
+                        </section>
 
-                        <article class="checkbox-icon">
+                        <div class="checkbox-icon">
                             <input type="checkbox">
-
                             <figure class="empty-icon">
                                 <i class="far fa-heart"></i>
-                            </figure>
-                            
+                            </figure>                        
                             <figure class="fill-icon">
                                 <i class="fas fa-heart"></i>                     
                             </figure>
-                        </article>      
-                    </article>
-            </article>
+                        </div>      
+                    </div>
+            </div>
 
-            <article class="restaurant-card">
+            <div class="restaurant-card">
                 <a href="./pages/menu-fran.html"> 
                     <figure class="top-card">
                         <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Menu à la Française"> 
                     </figure>
                 </a>
 
-                    <article class="bottom-card">
-                        <article class="subtitle-card">
+                    <div class="bottom-card">
+                        <section class="subtitle-card">
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
-                        </article>
+                        </section>
 
-                        <article class="checkbox-icon">
+                        <div class="checkbox-icon">
                             <input type="checkbox">
-
                             <figure class="empty-icon">
                                 <i class="far fa-heart"></i>
-                            </figure>
-                            
+                            </figure>                        
                             <figure class="fill-icon">
                                 <i class="fas fa-heart"></i>                     
                             </figure>
-                        </article>
-                    </article>
-            </article>
+                        </div>
+                    </div>
+            </div>
 
-            <article class="restaurant-card">
+            <div class="restaurant-card">
                 <a href="./pages/menu-sens.html">
                     <figure class="top-card">
                         <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Menu le Délice des Sens">
                     </figure> 
                 </a>               
 
-                    <article class="bottom-card">
-                        <article class="subtitle-card">
+                    <div class="bottom-card">
+                        <section class="subtitle-card">
                             <h3>Le délices des sens</h3>
                             <p>Folie-Méricourt</p>
-                        </article>
+                        </section>
                     
-                        <article class="checkbox-icon">
+                        <div class="checkbox-icon">
                             <input type="checkbox">
-
                             <figure class="empty-icon">
                                 <i class="far fa-heart"></i>
-                            </figure>
-                            
+                            </figure>                        
                             <figure class="fill-icon">
                                 <i class="fas fa-heart"></i>                     
                             </figure>
-                        </article>    
-                    </article>
-            </article>
+                        </div>    
+                    </div>
+            </div>
 
-        </article>
+        </div>
 
-    </section>
+    </article>
 
 </main>
  
 <footer>
 
-    <article id="footer">
-
-        <nav class="info">
-
-            <h4>ohmyfood</h4>
-
-            <a class="link" href="#">
-                <div class="icon">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <span>Proposer un restaurant</span>
-            </a>
-            
-            <a class="link" href="#">
-                <div class="icon">
-                    <i class="fas fa-hands-helping"></i>
-                </div>
-                <span>Devenir partenaire</span>
-            </a>
-
-            <a href="#">Mentions légales</a>   
-                                
-            <a href="mailto:contact@ohmyfood.com">Contact</a>
-
-        </nav>
-
-    </article>  
+    <article aria-label="footer-container">
+        <div id="footer">
+            <nav class="info">
+                <h4>ohmyfood</h4>
+                <a class="link" href="#">
+                    <div class="icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <span>Proposer un restaurant</span>
+                </a>        
+                <a class="link" href="#">
+                    <div class="icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <span>Devenir partenaire</span>
+                </a>
+                <a href="#">Mentions légales</a>                               
+                <a href="mailto:contact@ohmyfood.com">Contact</a>
+            </nav>
+        </div> 
+    </article> 
 
 </footer>
 

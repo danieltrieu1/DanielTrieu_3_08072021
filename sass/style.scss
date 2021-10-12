@@ -181,7 +181,8 @@ a {
 }
 
 #restaurant-bloc {
-    @include flex(column);
+    // @include flex(column);
+    display: grid;
     background: $background-color;
     padding: 1rem;
     margin-top: 3rem;
@@ -193,7 +194,6 @@ a {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* breakpoint auto */
 
         width: 100%;
-        display: grid;
         gap: 1rem;
     }
 
@@ -310,6 +310,10 @@ a {
                 }
             }
         }
+
+        #restaurant-bloc {
+            @include flex(column);
+        }
     }
 
     @media #{$large} {
@@ -327,10 +331,12 @@ a {
         }
 
         #restaurant-bloc {
+            @include flex(column);
             #restaurant-box {
                 width: 70%;
             }
         }
+
         #footer {
             .info {
                 display: flex;
@@ -356,6 +362,7 @@ a {
         }
 
         #restaurant-bloc {
+            @include flex(column);
             #restaurant-box {
                 width: 950px;
             }

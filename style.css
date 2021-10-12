@@ -592,19 +592,8 @@ a {
 }
 
 #restaurant-bloc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
   background: #F6F6F6;
   padding: 1rem;
   margin-top: 3rem;
@@ -614,9 +603,8 @@ a {
 #restaurant-bloc #restaurant-box {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* breakpoint auto */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));/* breakpoint auto */
   width: 100%;
-  display: grid;
   gap: 1rem;
 }
 #restaurant-bloc .restaurant-card {
@@ -973,6 +961,22 @@ a {
   #function-bloc #function-box .function-card {
     padding-right: 2rem;
   }
+
+  #restaurant-bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1360px) {
   #function-bloc {
@@ -1002,6 +1006,21 @@ a {
     padding-right: 2rem;
   }
 
+  #restaurant-bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #restaurant-bloc #restaurant-box {
     width: 70%;
   }
@@ -1047,6 +1066,21 @@ a {
     padding-right: 2rem;
   }
 
+  #restaurant-bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #restaurant-bloc #restaurant-box {
     width: 950px;
   }
